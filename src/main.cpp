@@ -4,7 +4,7 @@
 #define STB_IMAGE_IMPLEMENTATION // Keep this (Don't define it again elsewhere when including stb_image).
 #include <stb_image.h>
 #include <glad/glad.h>
-#include <GLFW/glfw3.h> // Must be included after glad.
+#include <GLFW/glfw3.h> // Don't include me before glad.
 #include <glm/glm.hpp>
 
 int main()
