@@ -11,8 +11,10 @@
 !/include/
 !/src/
 !/third_party/
+!/assets/
 
 # Keep the contents of those directories.
 !/include/**
 !/src/**
 !/third_party/**
+!/assets/**
