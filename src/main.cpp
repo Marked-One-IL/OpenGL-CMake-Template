@@ -14,7 +14,8 @@ int main()
 {
 #ifndef READY_TO_DISTRIBUTE
     // Keep this.
-    // Ensures the executable runs from the project root.
+    // This ensures the executable runs from the project root during development.
+    // Some build systems mess this up.
     std::filesystem::current_path(PROJECT_ROOT);
 #endif
 
