@@ -7,13 +7,15 @@
 #include <GLFW/glfw3.h> // Don't include me before glad.
 #include <glm/glm.hpp>
 
+// Remove this comment when you're ready to distribute your project to others.
+// #define READY_TO_DISTRIBUTE
+
 int main()
 {
-#ifndef NDEBUG
+#ifndef READY_TO_DISTRIBUTE
     // Keep this.
-    // This makes the executable behave like it's in the assets directory.
-    // Which makes assets loading easier.
-    std::filesystem::current_path(std::filesystem::path(PROJECT_ROOT) / "assets");
+    // Ensures the executable runs from the project root.
+    std::filesystem::current_path(PROJECT_ROOT);
 #endif
 
     return 0;
