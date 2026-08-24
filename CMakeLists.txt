@@ -5,15 +5,6 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-# Force static linking (No .dll-s and no .so-s).
-set(GLFW_BUILD_SHARED_LIBS OFF CACHE BOOL "" FORCE)
-if(MSVC)
-	set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded")
-endif()
-if(MINGW)
-	add_link_options(-static -static-libgcc -static-libstdc++)
-endif()
-
 # Fetch dependencies.
 include(FetchContent)
 FetchContent_Declare(glfw GIT_REPOSITORY "https://github.com/glfw/glfw.git" GIT_TAG 3.5.1)
